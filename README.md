@@ -32,11 +32,11 @@ $ yarn dev
 
 ## 🚀 Usage example
 
-You can make the calls to the end-points with [Insomnia][https://insomnia.rest/] or other app you prefer
+You can make the calls to the end-points with [Insomnia](https://insomnia.rest/) or other app you prefer
 
 ## 💻 Development setup
 
-You can run a test-suite with [Jest][https://jestjs.io/]
+You can run a test-suite with [Jest](https://jestjs.io/)
 
 ```sh
 yarn test
@@ -48,7 +48,7 @@ Made by Carlos George :wave: [Get in touch!](https://www.linkedin.com/in/carlos-
 
 Distributed under the MIT license. See [LICENSE](LICENSE.md) for more information.
 
-[https://github.com/yourname/github-link](https://github.com/dbader/)
+[https://github.com/carlos-george/](https://github.com/carlos-george/)
 
 ## Contributing
 
