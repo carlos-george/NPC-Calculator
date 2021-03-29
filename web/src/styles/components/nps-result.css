@@ -1,0 +1,69 @@
+.result-promoters {
+  width: 150px;
+  height: 170px;
+  border-radius: 10px;
+  border: 2px solid #7cd633;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #7cd633;
+}
+
+.result-detractors {
+  width: 150px;
+  height: 170px;
+  border-radius: 10px;
+  border: 2px solid #d83131;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #d83131;
+}
+
+.nps {
+  width: 150px;
+  height: 170px;
+  border-radius: 10px;
+  border: 2px solid #5a5a5a;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #5a5a5a;
+}
+
+.nps .nps-icon {
+  width: 50px;
+  height: 50px;
+  background-color: #5a5a5a;
+  border-radius: 50%;
+  color: #fff;
+  position: relative;
+  top: -30px;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nps-result-container svg {
+  position: relative;
+  top: -33px;
+  z-index: 10;
+  background-color: #f7fbfd;
+}
+
+.nps-result-container h2 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.nps-result-container strong {
+  letter-spacing: 1.2px;
+  text-align: center;
+}

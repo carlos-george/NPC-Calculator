@@ -1,6 +1,7 @@
 import { Request, Response } from "express";
 import { getCustomRepository } from "typeorm";
 import { SurveysRepository } from "../repositories/SurveysRepository";
+import { SurveysUsersRepository } from "../repositories/SurveysUsersRepository";
 
 class SurveyController {
 
@@ -28,6 +29,7 @@ class SurveyController {
 
         return res.json(all);
     }
+
 }
 
 export { SurveyController }

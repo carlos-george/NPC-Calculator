@@ -1,5 +1,6 @@
 import { Request, Response } from 'express';
 import { getCustomRepository, Not, IsNull } from 'typeorm';
+import { calculate } from '../utils/NpsCalculateUtils';
 import { SurveysUsersRepository } from '../repositories/SurveysUsersRepository';
 
 class NpsController {
@@ -25,14 +26,14 @@ class NpsController {
 
         const totalAnswers = surveysUsers.length;
 
-        const calculate = Number((((totalPromotors - totalDetractors) / totalAnswers) * 100).toFixed(2));
+        const calculated = calculate(totalPromotors, totalDetractors, totalAnswers);
 
         return res.json({
             totalDetractors,
             totalPromotors,
             totalPassives,
             totalAnswers,
-            nps: calculate
+            nps: calculated
 
         });
     }

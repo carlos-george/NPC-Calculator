@@ -25,7 +25,7 @@ class UserController {
 
         const userAlreadyExists = await userRepository.findOne({ email });
 
-        if (userAlreadyExists) throw new AppErrors('User does not exists!');
+        if (userAlreadyExists) throw new AppErrors('User already exists!');
 
         const user = userRepository.create({
             name,

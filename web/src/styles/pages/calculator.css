@@ -1,0 +1,98 @@
+#home-container {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  top: 60px;
+}
+
+#home-container header {
+  width: 70vw;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#home-container header h2 {
+  margin-bottom: 20px;
+}
+
+#home-container header p + p {
+  margin-top: 15px;
+}
+
+#home-container main {
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#home-container main .line-divisor {
+  width: 100%;
+  border-top: 2px solid #bbb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#home-container main .nps-calculator {
+  background-color: #bec8ff;
+  padding: 4px 16px 4px 16px;
+  border-radius: 5px;
+  position: relative;
+  top: -22px;
+}
+
+#home-container main .line-divisor .nps-calculator strong {
+  font-size: 14px;
+  color: #37474f;
+}
+
+#home-container main .first-row {
+  width: 100vw;
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  padding: 15px 55px 15px 55px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#home-container main .second-row {
+  width: 100%;
+  display: flex;
+  margin-top: 35px;
+  margin-bottom: 15px;
+  padding: 15px 55px 15px 55px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#home-container main .count-responses {
+  width: 200px;
+}
+
+#home-container main .count-responses p + p {
+  margin-top: 10px;
+}
+
+#home-container main .group-promoters {
+  border-radius: 10px;
+  border: 2px solid #7cd633;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#home-container main .second-row h1 strong {
+  font-size: 54px;
+  line-height: 12px;
+}

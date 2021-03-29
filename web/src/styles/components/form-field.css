@@ -1,0 +1,64 @@
+#form-wrapper {
+  width: 100%;
+  position: relative;
+  height: 48px;
+  margin-bottom: 20px;
+}
+
+#form-wrapper input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 15px;
+  border: 3px solid #dadce0;
+  border-radius: 5px;
+  outline: none;
+  padding: 10px;
+  background: none;
+  z-index: 1;
+}
+
+#form-wrapper label {
+  position: absolute;
+  left: 10px;
+  top: 13px;
+  padding: 0 5px;
+  background-color: #f7fbfd;
+  color: #80868b;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+/*Input focus move up label*/
+#form-wrapper input:focus + label {
+  top: -7px;
+  left: 10px;
+  /* color: #bec8ff; */
+  font-size: 13px;
+  font-weight: 500;
+  z-index: 10;
+}
+
+/*Input focus sticky top label*/
+#form-wrapper input:not(:placeholder-shown) + label {
+  top: -7px;
+  left: 10px;
+  font-size: 13px;
+  font-weight: 500;
+  z-index: 10;
+}
+
+/* #form-wrapper input:not(:focus) + label {
+  top: -5px;
+  left: 3px;
+  font-size: 10px;
+  font-weight: 500;
+  z-index: 10;
+} */
+
+/*Input focus*/
+#form-wrapper input:focus {
+  border: 3px solid #bec8ff;
+}

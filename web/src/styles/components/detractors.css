@@ -1,0 +1,51 @@
+.group-detractors {
+  border-radius: 10px;
+  border: 2px solid #d83131;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.group-detractors svg {
+  position: relative;
+  top: -33px;
+  z-index: 10;
+  background-color: #f7fbfd;
+}
+
+.group-detractors .group-inputs {
+  display: flex;
+}
+
+.group-detractors .group-inputs .input-block {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.group-detractors .group-inputs .input-block label {
+  margin-bottom: 5px;
+  color: #d83131;
+}
+
+.group-detractors .group-inputs .input-block input {
+  width: 48px;
+  height: 48px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #9c9c9c;
+  outline: none;
+  text-align: center;
+}
+
+.group-detractors .group-inputs .input-block input:focus {
+  border: 1px solid #d83131;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

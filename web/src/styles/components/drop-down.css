@@ -1,0 +1,48 @@
+button.dropmenu-button {
+  width: 80px;
+  padding: 5px;
+  border-radius: 10px;
+  border: 1px solid green;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: green;
+  cursor: pointer;
+  outline: none;
+}
+
+.dropmenu-items-container {
+  min-width: 220px;
+  max-width: 100%;
+  max-height: 100%;
+  padding: 20px;
+  display: none;
+  position: absolute;
+  top: 80px;
+  overflow: hidden;
+  z-index: 1000;
+  border-radius: 10px;
+  border: 1px solid rgba(55, 71, 79, 0.445);
+  background-color: #fff;
+}
+
+.dropmenu-items-container.active {
+  display: flex;
+}
+
+.dropmenu-items-container ul li {
+  width: 100px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropmenu-items-container ul li strong {
+  cursor: pointer;
+}
+
+.dropmenu-items-container ul li svg {
+  cursor: pointer;
+}

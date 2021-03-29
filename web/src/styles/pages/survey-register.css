@@ -1,0 +1,160 @@
+#survey-wrapper {
+  width: 100%;
+  padding: 20px;
+  position: relative;
+  top: 60px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#survey-wrapper .survey-container {
+  width: 70%;
+}
+
+#survey-wrapper .survey-container .title {
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#survey-wrapper .survey-container .title .title-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#survey-wrapper .survey-container .title button.title-button svg {
+  margin-right: 5px;
+}
+
+#survey-wrapper .survey-container .title button + button {
+  margin-left: 10px;
+}
+
+#survey-wrapper .survey-container .title button.title-button {
+  max-width: 100%;
+  padding: 5px 10px 5px 10px;
+  border-radius: 10px;
+  border: 1px solid #008000;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #008000;
+  cursor: pointer;
+  outline: none;
+}
+
+#survey-wrapper .survey-container .title button.title-button.filter-active {
+  border: 1px solid #eb4e4e;
+  color: #eb4e4e;
+}
+
+#survey-wrapper .survey-container .title button.title-button.active {
+  border: 1px solid #eb4e4e;
+  color: #eb4e4e;
+}
+
+#survey-wrapper .survey-container .title p strong {
+  margin-top: 2.6px;
+  font-size: 15px;
+}
+
+#survey-wrapper .survey-container .table {
+  width: 100%;
+  background: #fff;
+  -webkit-box-shadow: 0px 5px 12px -12px rgba(0, 0, 0, 0.29);
+  -moz-box-shadow: 0px 5px 12px -12px rgba(0, 0, 0, 0.29);
+  box-shadow: 0px 5px 12px -12px rgba(0, 0, 0, 0.29);
+  border-collapse: collapse;
+}
+#survey-wrapper .survey-container .table thead.thead-primary {
+  border-radius: 20px;
+  background: #bec8ff;
+}
+#survey-wrapper .survey-container .table thead th {
+  border: none;
+  padding: 20px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #fff;
+  border-bottom: 2px solid #dee2e6;
+}
+#survey-wrapper .survey-container .table tbody tr {
+  margin-bottom: 20px;
+}
+#survey-wrapper .survey-container .table tbody th,
+#survey-wrapper .survey-container .table tbody td {
+  border: none;
+  padding: 30px;
+  font-size: 14px;
+  background: #e7eaeb;
+  border-bottom: 4px solid #f8f9fd;
+  text-align: center;
+}
+
+#survey-wrapper .survey-container .table th.thead-th-first {
+  width: 200px;
+}
+
+#survey-wrapper .survey-container .table tr .th-filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+#survey-wrapper .survey-container .table tbody tr .alert {
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  text-align: center;
+}
+
+#survey-wrapper .survey-container .table tbody td.img svg {
+  background-color: none;
+  color: #008000;
+  cursor: pointer;
+}
+
+#survey-wrapper .survey-container form {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+#survey-wrapper .survey-container form button {
+  width: 100%;
+  height: 54px;
+  border: 0;
+  cursor: pointer;
+  background: #3cdc8c;
+  border-radius: 10px;
+  color: #ffffff;
+  font-weight: 500;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: background-color 0.2s;
+}
+
+#survey-wrapper .survey-container form button:hover {
+  background: #36cf82;
+}
+#survey-wrapper .survey-container form button:disabled {
+  background: #bcecd4;
+  border-color: #3cdc8c;
+  cursor: auto;
+}
+
+#survey-wrapper .survey-container .add-company-block {
+  width: 100%;
+  overflow: hidden;
+  transition: max-height 0.6s ease;
+}
