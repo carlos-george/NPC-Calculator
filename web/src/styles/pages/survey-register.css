@@ -153,6 +153,10 @@
   cursor: auto;
 }
 
+#survey-wrapper .survey-container form .form-block {
+  margin-bottom: 20px;
+}
+
 #survey-wrapper .survey-container .add-company-block {
   width: 100%;
   overflow: hidden;

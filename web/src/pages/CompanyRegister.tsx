@@ -1,4 +1,4 @@
-import React, { FormEvent, useEffect, useRef, useState } from 'react';
+import React, { ChangeEvent, FormEvent, useEffect, useRef, useState } from 'react';
 import { FiArrowRight, FiFilter, FiMinus, FiPlus } from 'react-icons/fi';
 import { useHistory } from 'react-router-dom';
 
@@ -62,6 +62,17 @@ export default function CompanyRegister() {
             const list = response.data;
 
             setCompanys(list);
+        }).catch(err => {
+            if (err.response) {
+
+                const { error } = err.response.data;
+                setMessage([error.errors]);
+                setShowModal(prevState => !prevState);
+            }
+            if (err.message) {
+                setMessage([err.message]);
+                setShowModal(prevState => !prevState);
+            }
         });
 
     }, [cnpjFilter]);
@@ -94,9 +105,9 @@ export default function CompanyRegister() {
             }
         }, err => {
             // console.log('Erro: ', err.response.data.error);
-            const { error } = err.response.data
+            const { error } = err.response.data;
 
-            setMessage(error.errors);
+            setMessage([error.errors]);
             setShowModal(prevState => !prevState);
         });
 
@@ -115,7 +126,7 @@ export default function CompanyRegister() {
                 <Header />
                 <div className="survey-container">
                     <div className="title">
-                        <h2>Companys</h2>
+                        <h2>Companies</h2>
                         <div className="title-buttons">
                             <button className={`title-button ${active}`} onClick={(toggleAddCompany)}>
                                 {active === "active"
@@ -134,10 +145,10 @@ export default function CompanyRegister() {
                                 item={
                                     <FormField
                                         label="CNPJ"
-                                        name="cnpj"
+                                        name="cnpjFilter"
                                         type="text"
                                         value={cnpjFilter}
-                                        onChange={(event: any) => setCnpjFilter(event.target.value)}
+                                        onChange={(event: ChangeEvent<HTMLInputElement>) => setCnpjFilter(event.target.value)}
                                         maxLength={18}
                                         patterns={['99.999.999/9999-99']}
                                     />
@@ -149,26 +160,32 @@ export default function CompanyRegister() {
                         style={{ maxHeight: `${height}` }}
                         className="add-company-block">
                         <form onSubmit={handleAddCompany}>
-                            <FormField
-                                label="CNPJ"
-                                name="cnpj"
-                                type="text"
-                                value={values.cnpj}
-                                onChange={handleChange}
-                                onBlur={handleBlur}
-                                hasError={touched.cnpj && errors.cnpj}
-                                maxLength={18}
-                                patterns={['99.999.999/9999-99']}
-                            />
-                            <FormField
-                                label="Name"
-                                name="name"
-                                type="text"
-                                value={values.name}
-                                onChange={handleChange}
-                                onBlur={handleBlur}
-                                hasError={touched.name && errors.name}
-                            />
+                            <div className="form-block">
+
+                                <FormField
+                                    label="CNPJ"
+                                    name="cnpj"
+                                    type="text"
+                                    value={values.cnpj}
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    hasError={touched.cnpj && errors.cnpj}
+                                    maxLength={18}
+                                    patterns={['99.999.999/9999-99']}
+                                />
+                            </div>
+                            <div className="form-block">
+
+                                <FormField
+                                    label="Name"
+                                    name="name"
+                                    type="text"
+                                    value={values.name}
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    hasError={touched.name && errors.name}
+                                />
+                            </div>
                             < button type="submit" disabled={errors.name || errors.cnpj}>
                                 Confirm
                             </button>
@@ -216,7 +233,7 @@ export default function CompanyRegister() {
                 >
                     {message.map((msg, index) => {
                         return (
-                            <h2 key={`${msg.length}_${index}`}>{`- ${msg}`}</h2>
+                            <h2 key={`${index}`}>{`- ${msg}`}</h2>
                         );
                     })}
                 </Modal>

@@ -28,7 +28,7 @@ function useForm({
             [chave]: valor, // nome: 'valor'
         });
     }
-
+    //function handleChange(infosDoEvento: ChangeEvent<HTMLInputElement>) {
     function handleChange(infosDoEvento: any) {
         setValue(
             infosDoEvento.target.getAttribute('name'),

@@ -59,7 +59,7 @@ const FormField: React.FC<FormFieldProps> = ({
                     style={hasError ? { borderColor: '#d93025' } : {}}
                     {...rest}
                 />
-                <label htmlFor={fieldId}>
+                <label htmlFor={fieldId} style={hasError ? { color: '#d93025' } : {}}>
                     {label}
                 </label>
             </div>

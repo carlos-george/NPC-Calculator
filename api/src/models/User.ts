@@ -13,12 +13,21 @@ class User {
     @Column()
     email: string;
 
+    @Column()
+    password: string;
+
+    @Column()
+    readonly isAdmin: boolean;
+
     @CreateDateColumn()
     created_at: Date;
 
     constructor() {
         if (!this.id) {
             this.id = uuid();
+        }
+        if (!this.isAdmin) {
+            this.isAdmin = false;
         }
     }
 }

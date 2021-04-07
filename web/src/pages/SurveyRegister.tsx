@@ -185,24 +185,28 @@ export default function CompanyRegister() {
                         style={{ maxHeight: `${height}` }}
                         className="add-company-block">
                         <form onSubmit={handleAddSurveyCompany}>
-                            <FormField
-                                label="Title"
-                                name="title"
-                                type="text"
-                                value={values.title}
-                                onChange={handleChange}
-                                onBlur={handleBlur}
-                                hasError={touched.title && errors.title}
-                            />
-                            <FormField
-                                label="Description"
-                                name="description"
-                                type="text"
-                                value={values.description}
-                                onChange={handleChange}
-                                onBlur={handleBlur}
-                                hasError={touched.description && errors.description}
-                            />
+                            <div className="form-block">
+                                <FormField
+                                    label="Title"
+                                    name="title"
+                                    type="text"
+                                    value={values.title}
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    hasError={touched.title && errors.title}
+                                />
+                            </div>
+                            <div className="form-block">
+                                <FormField
+                                    label="Description"
+                                    name="description"
+                                    type="text"
+                                    value={values.description}
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    hasError={touched.description && errors.description}
+                                />
+                            </div>
                             <button type="submit" disabled={errors.title || errors.description}>
                                 Confirm
                             </button>
