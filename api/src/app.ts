@@ -25,7 +25,7 @@ app.use((err: Error, req: Request, res: Response, _next: NextFunction) => {
     })
 });
 
-const isRunning = `Server is running on port ${process.env.PORT}!`;
+const isRunning = `Server is running on port`;
 
 app.get("/", (request, response) => {
     return response.json({
